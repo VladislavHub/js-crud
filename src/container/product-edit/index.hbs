@@ -1,0 +1,48 @@
+{{!
+Це код container файлу для index сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
+}}
+
+<main>
+  <section>
+    <h1>Редагування товару</h1>
+    <card class="card">
+      <card class="card_body">
+        <card class="card_title">Інформація про товар</card>
+        <form method="POST" action="/product-edit">
+
+          <div class="card_input_small">
+            <div class="card_input_item">
+              <label for="name" class="card_label">Назва товару</label>
+              <input value="{{data.name}}" class="input_small" name="name" type="name">
+            </div>
+
+            <div class="card_input_item">
+              <label for="price" class="card_label">Ціна</label>
+              <input value="{{data.price}}" class="input_small" name="price" type="price">
+            </div>
+
+            <div class="card_input_item">
+              <label for="id" class="card_label">ID</label>
+              <input readonly value="{{data.id}}" class="input_small" name="id" type="id">
+            </div>
+          </div>
+
+          <div class="card_input_big">
+            <div class="card_input_item">
+              <label for="price" class="card_label">Короткий опис товару</label>
+              <input value="{{data.description}}" class="input_big" name="price" type="price">
+            </div>
+            <p class="card_info">Відображується у картці товару</p>
+          </div>
+
+          <div class="card_buttons">
+            <button class="button_primary">Зберегти оновлення</button>
+            <button class="button_danger">Видалити товар</button>
+          </div>
+
+        </form>
+      </card>
+    </card>
+  </section>
+</main>

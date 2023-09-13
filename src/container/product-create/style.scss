@@ -1,0 +1,103 @@
+@use '../../lib/service.scss' as s;
+
+body {
+    background-color: #92919188;
+    padding: s.space(4);
+}
+
+h1{
+    font-size: s.space(6);
+    color: rgb(58, 58, 255);
+    padding-bottom: s.space(6);
+    padding-top: s.space(6);
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: s.space(4);
+    padding: s.space(4);
+    box-shadow: 0px 0px 54px -16px rgba(0,0,0,0.6);
+
+    &_body {
+        display: flex;
+        flex-direction: column;
+        gap: s.space(6);
+    }
+
+    &_title {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    &_input_elem {
+        display: flex;
+        flex-direction: column;
+        gap: s.space(1);
+        width: 50%;
+    }
+
+    &_input_elem_big{
+        display: flex;
+        flex-direction: column;
+        gap: s.space(1);
+        width: 100%;
+    }
+
+    &_input_small{
+        display: flex;
+        gap: s.space(4);
+        padding-bottom: s.space(4);
+        width: auto;
+    }
+
+    &_input_big{
+        display: flex;
+        gap: s.space(4);
+        width: auto;
+    }
+
+    &_label{
+        font-size: 14px;
+    }
+
+    &_button {
+        margin-top: s.space(4);
+        padding: s.space(2);
+        border-radius: s.space(1);
+        font-size: s.space(4);
+        color: white;
+        background-color: rgb(58, 58, 255);
+        width: 100%;
+    }
+
+    &_info {
+        font-size: s.space(3);
+        color: gray;
+    }
+}
+
+.input_small{
+    border: 1px solid rgb(116, 114, 114);
+    border-radius: s.space(1);
+    padding: s.space(1);
+    box-shadow: 1px 1px 41px -8px rgb(255, 255, 255);
+    background-color: rgb(213, 212, 212);
+    
+}
+
+.input_big {
+    border: 1px solid rgb(116, 114, 114);
+    border-radius: s.space(1);
+    padding: s.space(2);
+    height: s.space(12);
+    width: 100%;
+    box-shadow: 1px 1px 41px -8px rgb(255, 255, 255);
+    background-color: rgb(213, 212, 212);
+}
+
+
+
+
+

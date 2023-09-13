@@ -1,0 +1,22 @@
+{{#with data.products}}
+{{#each list}}
+<card class="card">
+    <card class="card_body">
+
+        <div class="card_top">
+
+            <div class="card_title">{{name}}</div>
+            <div class="card_description">{{description}}</div>
+            <div class="card_id">ID:{{id}} </div>
+
+        </div>
+
+        <div class="card_bot">
+            <div class="card_price">{{price}}$</div>
+            <a href="/product-edit?id={{id}}" class="card_button">Редагувати</a>
+        </div>
+
+    </card>
+</card>
+{{/each}}
+{{/with}}
