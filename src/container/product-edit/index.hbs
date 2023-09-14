@@ -24,7 +24,7 @@
 
             <div class="card_input_item">
               <label for="id" class="card_label">ID</label>
-              <input readonly value="{{data.id}}" class="input_small" name="id" type="id">
+              <input value="{{data.id}}" class="input_small" name="id" type="id">
             </div>
           </div>
 
@@ -38,7 +38,7 @@
 
           <div class="card_buttons">
             <button class="button_primary">Зберегти оновлення</button>
-            <button class="button_danger">Видалити товар</button>
+            <a href="/product-delete?id={{id}}" class="button_danger">Видалити товар</a>
           </div>
 
         </form>

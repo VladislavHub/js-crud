@@ -64,37 +64,50 @@ class Product {
   static #list = []
 
   constructor(name, price, description) {
-    this.id = this.generateUniqueId()
-    this.createDate = new Date().toISOString()
     this.name = name
     this.price = price
     this.description = description
-    console.log(Product.name)
-  }
-
-  generateUniqueId() {
-    const min = 10000
-    const max = 99999
-    return Math.floor(Math.random() * (max - min + 1)) + min
+    this.id = Math.floor(Math.random() * 100000)
+    this.createDate = () => {
+      this.date = new Date().toISOString()
+    }
   }
 
   static getList = () => this.#list
+
+  checkid = (id) => this.id === id
 
   static add = (product) => {
     this.#list.push(product)
   }
 
-  static getById = (id) => {
-    return this.#list.find((product) => product.id === id)
+  static getById = (id) =>
+    this.#list.find((product) => product.id === id)
+
+  static deleteById = (id) => {
+    const index = this.#list.findIndex(
+      (product) => product.id === id,
+    )
+
+    if (index !== -1) {
+      this.#list.splice(index, 1)
+      return true
+    } else {
+      return false
+    }
   }
 
   static updateById = (id, data) => {
     const product = this.getById(id)
-    const { name } = data
+    const { name, price, description } = data
 
     if (product) {
       if (name) {
         product.name = name
+      } else if (price) {
+        product.price = price
+      } else if (description) {
+        product.description = description
       }
 
       return true
@@ -103,9 +116,18 @@ class Product {
     }
   }
 
-  static update = (name, { product }) => {
+  static update = (
+    name,
+    price,
+    description,
+    { product },
+  ) => {
     if (name) {
       product.name = name
+    } else if (price) {
+      product.price = price
+    } else if (description) {
+      product.description = description
     }
   }
 }
@@ -232,8 +254,6 @@ router.get('/product-edit', function (req, res) {
   const { id } = req.query
 
   const product = Product.getById(Number(id))
-  console.log(product)
-
   if (product) {
     res.render('product-edit', {
       style: 'product-edit',
@@ -257,7 +277,7 @@ router.get('/product-edit', function (req, res) {
 router.post('/product-edit', function (req, res) {
   const { id, name, price, description } = req.body
 
-  const product = Product.updateById(id, {
+  const product = Product.updateById(Number(id), {
     name,
     price,
     description,
@@ -275,6 +295,22 @@ router.post('/product-edit', function (req, res) {
       info: 'Сталася помилка',
     })
   }
+})
+
+// ================================================================
+
+router.get('/product-delete', function (req, res) {
+  const { id } = req.query
+  console.log('test')
+  console.log(id)
+  console.log('test')
+
+  Product.deleteById(Number(id))
+
+  res.render('alert', {
+    style: 'alert',
+    info: 'Товар видалений',
+  })
 })
 
 // Підключаємо роутер до бек-енду
