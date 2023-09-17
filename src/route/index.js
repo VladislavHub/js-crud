@@ -104,9 +104,11 @@ class Product {
     if (product) {
       if (name) {
         product.name = name
-      } else if (price) {
+      }
+      if (price) {
         product.price = price
-      } else if (description) {
+      }
+      if (description) {
         product.description = description
       }
 
@@ -122,12 +124,16 @@ class Product {
     description,
     { product },
   ) => {
-    if (name) {
-      product.name = name
-    } else if (price) {
-      product.price = price
-    } else if (description) {
-      product.description = description
+    if (product) {
+      if (name) {
+        product.name = name
+      }
+      if (price) {
+        product.price = price
+      }
+      if (description) {
+        product.description = description
+      }
     }
   }
 }

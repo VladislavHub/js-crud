@@ -30,15 +30,15 @@
 
           <div class="card_input_big">
             <div class="card_input_item">
-              <label for="price" class="card_label">Короткий опис товару</label>
-              <input value="{{data.description}}" class="input_big" name="price" type="price">
+              <label for="description" class="card_label">Короткий опис товару</label>
+              <input value="{{data.description}}" class="input_big" name="description" type="description">
             </div>
             <p class="card_info">Відображується у картці товару</p>
           </div>
 
           <div class="card_buttons">
             <button class="button_primary">Зберегти оновлення</button>
-            <a href="/product-delete?id={{id}}" class="button_danger">Видалити товар</a>
+            <a href="/product-delete?id={{data.id}}" class="button_danger">Видалити товар</a>
           </div>
 
         </form>
