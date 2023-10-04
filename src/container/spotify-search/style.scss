@@ -1,0 +1,83 @@
+@use '../../lib/service.scss' as s;
+
+body {
+    background-color: #121212;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+}
+
+main{
+    padding: s.space(5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: s.space(4);
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.header{
+    display: flex;
+    padding: 9px 32px;
+    margin-bottom: 40px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 8px;
+    background: #292929;
+    width: 656px;
+    gap: 24px;
+
+    &_search_button{
+        color: #FFF;
+        font-size: 28px;
+        font-weight: 400;
+        
+    }
+
+    &_input{
+        color: #FFF;
+        font-size: 24px;
+        font-weight: 400;
+        width: 100%;
+        padding: 0 20;
+    }
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.playlist{
+    display: flex;
+    gap: 20px;
+
+    &_image{
+        width: 164px;
+        height: 164px;
+    }
+
+    &_info{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    &_name{
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    &_amount{
+        color: #BDBDBD;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}

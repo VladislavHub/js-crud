@@ -1,0 +1,84 @@
+@use '../../lib/service.scss' as s;
+
+body {
+    background-color: #121212;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+}
+
+main{
+    padding: s.space(5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: s.space(4);
+}
+
+section{
+    display: flex;
+    width: 1920px;
+    height: 1080px;
+    padding: 36px 600px;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+.title{
+    color: #FFFEFE;
+    font-size: s.space(6);
+    font-weight: 500;
+}
+
+.play_list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    align-self: stretch;
+
+    &_item{
+        display: flex;
+        align-items: flex-start;
+        gap: 24px;
+        color: #FFFEFE;
+        text-decoration: none;
+        transition: opacity 0.3s;
+    }
+
+    &_item:hover{
+        opacity: 0.7;
+        color: rgb(240, 202, 253);
+    }
+    
+
+    &_title{
+        font-size: s.space(6);
+        font-weight: 500;
+    }
+
+    &_descriprion{
+        font-size: s.space(4);
+        font-weight: 500;
+    }
+
+    &_icon_playlist{
+        background-image: url(/svg/playlist.svg);
+        width: 56px;
+        height: 56px;
+    }
+
+    &_icon_mix{
+        background-image: url(/svg/mix.svg);
+        width: 56px;
+        height: 56px;
+    }
+
+    &_info{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+
+

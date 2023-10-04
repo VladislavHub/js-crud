@@ -1,0 +1,21 @@
+<div class="card">
+    <div class="card_body">
+        <img src="{{img}}" alt="purchase" width="200px" height="300px">
+        <div class="card_title">{{title}}</div>
+        <div class="card_description">{{description}}</div>
+        <div class="card_info_badge">
+            {{#if isReady}}
+            <div class="card_badge_ready">
+                Готовий до відправки
+            </div>
+            {{/if}}
+
+            {{#if isTop}}
+            <div class="card_badge_top">
+                Топ продажів
+            </div>
+            {{/if}}
+        </div>
+        <a href="/purchase-product?id={{id}}" class="card_button">Купити зараз: {{price}}₴</a>
+    </div>
+</div>

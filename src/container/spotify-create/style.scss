@@ -1,0 +1,77 @@
+@use '../../lib/service.scss' as s;
+
+body {
+    background-color: #121212;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+}
+
+main{
+    padding: s.space(5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: s.space(4);
+}
+
+section{
+    display: flex;
+    width: 1920px;
+    height: 1080px;
+    padding: 36px 600px;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    margin-top: 284px;
+    position: relative;
+}
+
+.title{
+    color: #FFFEFE;
+    font-size: s.space(5);
+    font-weight: 500;
+}
+
+.playlist_name_input{
+    color: #FFF;
+    font-size: 68px;
+    font-weight: 600;
+    border-bottom: 1px solid #fff;
+    width: 720px;
+    padding-bottom: 20px;
+}
+
+.playlist_name_button{
+    display: flex;
+    padding: 20px 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1000px;
+    background: #20D562;
+    color: #FFF;
+    font-size: 20px;
+}
+
+.playlist_name_close{
+    display: flex;
+    align-items: start;
+    background-image: url(/svg/close.svg);
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 300px;
+}
+
+.playlist_name_input::placeholder {
+    color: #999; 
+    font-size: 68px; 
+    text-align: center;
+  }
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    gap: 60px;
+}

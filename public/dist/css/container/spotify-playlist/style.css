@@ -1,0 +1,94 @@
+body {
+  background-color: #121212;
+  color: #FFFFFF;
+  font-family: "Inter", sans-serif;
+}
+
+main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.playlist_item_info_name {
+  color: #fff;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.playlist {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.playlist_item {
+  display: flex;
+  gap: 32px;
+  width: 720px;
+}
+.playlist_item_body {
+  display: flex;
+  gap: 32px;
+  width: 720px;
+}
+.playlist_item_img {
+  width: 92px;
+  height: 92px;
+}
+.playlist_item_info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+}
+.playlist_item_button {
+  display: flex;
+  align-items: center;
+}
+.playlist_item_info_name {
+  font-size: 24px;
+  font-weight: 500;
+}
+.playlist_item_info_author {
+  color: #BABABA;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.add_button {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding-bottom: 32px;
+}
+
+.button_back {
+  display: flex;
+  justify-content: start;
+  padding-top: 50px;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 24px;
+  transition: text-shadow 1s;
+}
+
+.button_back:hover {
+  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18, -16px -16px 1px rgba(206, 89, 55, 0);
+}
+
+/*# sourceMappingURL=style.css.map */

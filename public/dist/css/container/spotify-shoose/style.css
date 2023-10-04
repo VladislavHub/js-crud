@@ -1,0 +1,74 @@
+body {
+  background-color: #121212;
+  color: #FFFFFF;
+  font-family: "Inter", sans-serif;
+}
+
+main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+section {
+  display: flex;
+  width: 1920px;
+  height: 1080px;
+  padding: 36px 600px;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+.title {
+  color: #FFFEFE;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.play_list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  align-self: stretch;
+}
+.play_list_item {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  color: #FFFEFE;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+.play_list_item:hover {
+  opacity: 0.7;
+  color: rgb(240, 202, 253);
+}
+.play_list_title {
+  font-size: 24px;
+  font-weight: 500;
+}
+.play_list_descriprion {
+  font-size: 16px;
+  font-weight: 500;
+}
+.play_list_icon_playlist {
+  background-image: url(/svg/playlist.svg);
+  width: 56px;
+  height: 56px;
+}
+.play_list_icon_mix {
+  background-image: url(/svg/mix.svg);
+  width: 56px;
+  height: 56px;
+}
+.play_list_info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/*# sourceMappingURL=style.css.map */

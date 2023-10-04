@@ -1,0 +1,34 @@
+<main>
+  {{#with data}}
+  <section>
+
+    <form method="POST" action="/spotify-search" class="header">
+      <img src="/svg/search.svg" class="header_search_svg">
+      <input placeholder="Введіть запит" type="search" class="header_input" name="value" value="{{value}}">
+      <button class="header_search_button">Пошук</button>
+    </form>
+
+    <div class="content">
+      {{#each list}}
+      <div class="playlist">
+        <img class="playlist_image" src="{{image}}" alt="{{name}}">
+
+        <div class="playlist_info">
+          <div class="playlist_name">{{name}}</div>
+          <div class="playlist_amount">Плейліст - {{amount}} пісень</div>
+        </div>
+
+      </div>
+      {{/each}}
+
+    </div>
+  </section>
+  {{/with}}
+</main>
+
+
+{{!-- <div>
+  поиск треков ((spotify-search))
+  добвіление трека в плейлист ((spotify-track-add))
+
+</div> --}}
