@@ -15,13 +15,18 @@
           </div>
         </div>
 
-        <a class="playlist_item_button" href="/spotify-track-add?playlistId={{playlistId}}&trackId={{id}}">
-          <img src="/svg/add-track.svg">
-        </a>
+        <form action="/spotify-track-add" method="POST">
+          <button type="submit">
+            <input type="hidden" name="playlistId" value="{{../playlistId}}">
+            <input type="hidden" name="trackId" value="{{id}}">
+            <img src="/svg/add-track.svg">
+          </button>
+        </form>
 
       </div>
       {{/each}}
     </div>
     {{/with}}
+
   </section>
 </main>

@@ -285,22 +285,65 @@ router.get('/spotify-track-delete', function (req, res) {
 // ================================================================
 
 router.get('/spotify-track-add', function (req, res) {
-  const tracks = Track.getList()
-  // console.log(tracks)
-
   const playlistId = Number(req.query.playlistId)
-  const trackId = Number(req.query.trackId)
+  const playlist = Playlist.getById(playlistId)
+  const allTracks = Track.getList()
 
-  console.log(playlistId)
-  console.log(trackId)
-
-  Playlist.addTrackById(trackId)
+  console.log(playlistId, playlist, allTracks)
 
   res.render('spotify-playlist-add', {
     style: 'spotify-playlist-add',
 
     data: {
-      tracks,
+      playlistId: playlist.id,
+      tracks: allTracks,
+      link: `/spotify-track-add?playlistId={{playlistId}}&trackId={{id}}`,
+    },
+  })
+})
+
+// ================================================================
+
+router.post('/spotify-track-add', function (req, res) {
+  const playlistId = Number(req.body.playlistId)
+  const trackId = Number(req.body.trackId)
+
+  const playlist = Playlist.getById(playlistId)
+
+  if (!playlist) {
+    return res.render('alert', {
+      style: 'alert',
+      data: {
+        message: 'Помилка',
+        info: 'Такого плейліста не знайдено',
+        link: `/spotify-playlist?id=${playlistId}`,
+      },
+    })
+  }
+
+  const trackToAdd = Track.getList().find(
+    (track) => track.id === trackId,
+  )
+
+  if (!trackToAdd) {
+    return res.render('alert', {
+      style: 'alert',
+      data: {
+        message: 'Помилка',
+        info: 'Такого треку не знайдено',
+        link: `/spotify-track-add?playlistId=${playlistId}`,
+      },
+    })
+  }
+
+  playlist.tracks.push(trackToAdd)
+
+  res.render('spotify-playlist', {
+    style: 'spotify-playlist',
+    data: {
+      playlistId: playlist.id,
+      tracks: playlist.tracks,
+      name: playlist.name,
     },
   })
 })
