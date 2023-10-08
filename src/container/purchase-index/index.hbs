@@ -4,17 +4,23 @@
 }}
 
 <main>
+  <div class="title">Товари</div>
+  <div class="story">Комп'ютери та ноутбуки / Комп'ютери, неттопи, моноблоки</div>
   <section>
-    <div class="card">
 
-      <div class="card_info">
-        <h1>{{data.message}}</h1>
-        <h3>{{data.info}}</h3>
-      </div>
 
-      <a class="card_button" href="{{data.link}}">Повернутися назад</a>
+    {{#with data}}
 
-    </div>
+    {{> purchase}}
+    {{> purchase}}
+    {{> purchase}}
+
+    {{/with}}
+
+    {{!-- {{#each data.list}}
+    {{> purchase-product data=this}}
+    {{/each}} --}}
+
   </section>
 </main>
 

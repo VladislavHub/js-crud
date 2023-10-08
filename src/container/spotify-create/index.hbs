@@ -4,17 +4,19 @@
 }}
 
 <main>
+  <a href="/" class="playlist_name_close"></a>
   <section>
-    <div class="card">
 
-      <div class="card_info">
-        <h1>{{data.message}}</h1>
-        <h3>{{data.info}}</h3>
-      </div>
+    <div class="title">Назвіть плейліст</div>
 
-      <a class="card_button" href="{{data.link}}">Повернутися назад</a>
+    <form class="form" method="POST" action="/spotify-create{{#if data.isMix}}?isMix=true{{/if}}">
+      <input required placeholder="Назва" type="text" name="name" class="playlist_name_input">
 
-    </div>
+
+      <button class="playlist_name_button">Створити</button>
+    </form>
+
+
   </section>
 </main>
 

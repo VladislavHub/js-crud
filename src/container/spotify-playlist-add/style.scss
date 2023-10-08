@@ -1,0 +1,97 @@
+@use '../../lib/service.scss' as s;
+
+body {
+    background-color: #121212;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+}
+
+main{
+    padding: s.space(5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: s.space(4);
+}
+
+.playlist_item_info_name{
+    color: #fff;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.title{
+    color: #FFF;
+    font-size: 28px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.playlist{
+    display: flex;
+    padding: 24px 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    align-self: stretch;
+    border-radius: 8px;
+    background: #282828;
+
+    &_item{
+        display: flex;
+        gap: 32px;
+        width: 720px;
+    }
+
+    &_item_body{
+        display: flex;
+        gap: 32px;
+        width: 720px;
+    }
+
+    &_item_img{
+        width: 92px;
+        height: 92px;
+    }
+
+    &_item_info{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        justify-content: center;
+    }
+
+    &_item_button{
+        display: flex;
+        align-items: center;
+    }
+
+    &_item_info_name{
+        font-size: 24px;
+        font-weight: 500;
+    }
+    
+    &_item_info_author{
+        color: #BABABA;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+
+.add_button{
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding-bottom: 32px;
+}

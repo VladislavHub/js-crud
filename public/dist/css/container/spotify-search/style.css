@@ -1,0 +1,76 @@
+body {
+  background-color: #121212;
+  color: #FFFFFF;
+  font-family: "Inter", sans-serif;
+}
+
+main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.header {
+  display: flex;
+  padding: 9px 32px;
+  margin-bottom: 40px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 8px;
+  background: #292929;
+  width: 656px;
+  gap: 24px;
+}
+.header_search_button {
+  color: #FFF;
+  font-size: 28px;
+  font-weight: 400;
+}
+.header_input {
+  color: #FFF;
+  font-size: 24px;
+  font-weight: 400;
+  width: 100%;
+  padding: 0 20;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.playlist {
+  display: flex;
+  gap: 20px;
+}
+.playlist_image {
+  width: 164px;
+  height: 164px;
+}
+.playlist_info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+.playlist_name {
+  font-size: 24px;
+  font-weight: 500;
+}
+.playlist_amount {
+  color: #BDBDBD;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/*# sourceMappingURL=style.css.map */
