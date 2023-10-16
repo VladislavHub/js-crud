@@ -1,0 +1,15 @@
+.product-info_button {
+  background-color: #0D6EFD;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+.product-info_button:hover {
+  opacity: 0.7;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,16 +1,27 @@
 @use '../../lib/service.scss' as s;
 
+main{
+    display: flex;
+    justify-content: center;
+}
+
+.main_content{
+    max-width: 1000px;
+    width: 100%;
+}
+
+
 body {
     background-color: #92919188;
     padding: s.space(4);
 }
 
 h1{
-    font-size: s.space(4);
+    font-size: s.space(5);
 }
 
 h3 {
-    font-size: s.space(3);
+    font-size: s.space(4);
 }
 
 .card {
@@ -32,9 +43,9 @@ h3 {
     display: flex;
     justify-content: center;
     text-decoration: none;
-    font-size: s.space(3);
+    font-size: s.space(5);
     color: white;
-    background-color: rgb(58, 58, 255);
+    background-color: #0D6EFD;
     padding: s.space(2);
     border-radius: s.space(1);
     width: 30%;

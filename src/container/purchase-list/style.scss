@@ -1,0 +1,126 @@
+@use '../../lib/service.scss' as s;
+
+@use '../../component/heading/style.scss' as heading;
+@use '../../component/purchase-product/style.scss' as purchaseProduct;
+@use '../../component/field/style.scss' as field;
+@use '../../component/divider/style.scss' as divider;
+@use '../../component/button/style.scss' as button;
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.main_content{
+    display: flex;
+    flex-direction: column;
+    gap: s.space(10);
+    padding: s.space(10);
+    font-family: 'Inter', sans-serif;
+    max-width: 1000px;
+    width: 100%;
+}
+
+body {
+    background-color: #92919188;
+    padding: s.space(4);
+}
+
+.heading_title{
+    color: var(--Blue, #0050FF);
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.purchase_list{
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.purchase_list-card{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.card_id{
+    color: var(--Grey, #808080);
+    font-size: 16px;
+    font-weight: 400;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.card_purchase{
+    display: flex;
+    width: 320px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+
+    &-title{
+        color: var(--Grey, #808080);
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    &-name{
+        color: var(--Black, #000);
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+.card_price{
+    display: flex;
+    width: 235px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+
+    &-title{
+        color: var(--Grey, #808080);
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    &-amount{
+        color: var(--Black, #000);
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+.card_bonus{
+    display: flex;
+    width: 211px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+
+    &-title{
+        color: var(--Grey, #808080);
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    &-amount{
+        color: var(--Black, #000);
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+.product-info_divider{
+    margin: 20 0;
+}

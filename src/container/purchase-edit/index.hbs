@@ -1,0 +1,47 @@
+<main class="main">
+  <div class="main_content">
+    {{#with data.purchases.list}}
+    <form method="POST" action="/purchase-edit?id={{id}}" class="form-card">
+      {{> heading title="Зміна данних"}}
+
+
+      <ul class="cart">
+
+        <div class='purchase-item__block'>
+          <span class='title'>ID:</span>
+          <span class='text'>{{id}}</span>
+        </div>
+
+      </ul>
+
+      {{> divider}}
+
+      <div class="cart_small">
+        <div class="cart_small-input">
+          <label for="{{name}}" class="field_label">Ім'я:</label>
+          <input value="{{firstname}}" name="firstname" class="field_input">
+        </div>
+
+        <div class="cart_small-input">
+          <label for="{{name}}" class="field_label">Прізвище:</label>
+          <input value="{{lastname}}" name="lastname" class="field_input">
+        </div>
+
+        <div class="cart_small-input">
+          <label for="{{name}}" class="field_label">Телефон:</label>
+          <input value="{{phone}}" name="phone" class="field_input">
+        </div>
+
+        <div class="cart_small-input">
+          <label for="{{name}}" class="field_label">Пошта:</label>
+          <input value="{{email}}" name="email" class="field_input">
+        </div>
+      </div>
+
+
+      {{> button text="Зберегти зміни"}}
+
+    </form>
+    {{/with}}
+  </div>
+</main>

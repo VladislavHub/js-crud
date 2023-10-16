@@ -1,0 +1,46 @@
+<main class="main">
+  {{#with data.purchases}}
+  <div class="content">
+
+    {{> heading title='Мої замовлення'}}
+    {{#each list}}
+    <ul class="purchase_list">
+
+      <a href="/purchase-info?id={{id}}">
+        <li class="purchase_list-card">
+
+          <div class="card_id">
+            <div>ID замовлення: </div>
+            <div>{{id}}</div>
+          </div>
+          {{#with product}}
+          <div class="card_purchase">
+            <p class="card_purchase-title">Товар</p>
+            <p class="card_purchase-name">{{title}}</p>
+          </div>
+
+          <div class="card_id">
+            <div>ID товару : </div>
+            <div>{{id}}</div>
+          </div>
+          {{/with}}
+          <div class="card_price">
+            <p class="card_price-title">Сума замовлення</p>
+            <p class="card_price-amount">{{totalPrice}} грн</p>
+          </div>
+
+          <div class="card_bonus">
+            <p class="card_bonus-title">Нараховані бонуси</p>
+            <p class="card_bonus-amount">{{bonus}} грн</p>
+          </div>
+
+        </li>
+      </a>
+
+    </ul>
+
+    {{> divider}}
+    {{/each}}
+  </div>
+  {{/with}}
+</main>

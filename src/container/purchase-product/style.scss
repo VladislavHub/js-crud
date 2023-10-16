@@ -1,101 +1,105 @@
 @use '../../lib/service.scss' as s;
 
+@use '../../component/heading/style.scss' as heading;
+@use '../../component/purchase-product/style.scss' as purchaseProduct;
+@use '../../component/field/style.scss' as field;
+@use '../../component/divider/style.scss' as divider;
+@use '../../component/button/style.scss' as button;
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.main_content{
+    display: flex;
+    flex-direction: column;
+    gap: s.space(10);
+    padding: s.space(10);
+    font-family: 'Inter', sans-serif;
+    max-width: 1000px;
+    width: 100%;
+}
+
 body {
     background-color: #92919188;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-main{
-    padding: s.space(5);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: s.space(4);
-}
-
-section{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: space-between;
-    gap: s.space(4);
-    width: 1000px;
-}
-
-.title{
-    font-size: s.space(8);
-}
-.story{
-    font-size: s.space(4);
-    margin-bottom: s.space(4);
-}
-
-.card{
-    min-width: 320px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     padding: s.space(4);
-    border-radius: s.space(3);
-    border: 1px solid #9ea2a5;
-
-    &_body{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: s.space(4);  
-    }
-
-    &_title{
-        font-size: s.space(5);
-        font-weight: 600;
-    }
-
-    &_description{
-        font-size: s.space(4);
-    }
-
-    &_button{
-        font-size: s.space(5);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: s.space(2);
-        gap: s.space(2);
-        padding: s.space(4) s.space(4);
-        background-color: #0050FF;
-        color: white;
-        width: 288px;
-        text-decoration: none;
-    }
-
-    &_info_badge{
-        display: flex;
-        align-items: flex-start;
-        align-content: flex-start;
-        gap: s.space(4);
-        align-self: stretch;
-        flex-wrap: wrap;
-    }
-
-    &_badge_ready{
-        display: flex;
-        padding: s.space(2) s.space(4);
-        align-items: flex-start;
-        gap: 10px;
-        border-radius: 80px;
-        border: 1px solid var(--Green, #008000);  
-        color: #008000;  
-    }
-
-    &_badge_top{
-        display: flex;
-        padding: s.space(2) s.space(4);
-        align-items: flex-start;
-        gap: 10px;
-        border-radius: 80px;
-        border: 1px solid var(--Green, #0050FF);  
-        color: #0050FF; 
-    }
 }
 
+.product-info {
+    display: flex;
+    gap: s.space(4);
+    align-items: flex-start;
+} 
+
+.product-list{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: s.space(5);
+}
+
+.product-info_image{
+    max-height: 450px;
+    max-width: 450px;
+    width: 100%;
+}
+
+.product-info_title{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 130%;
+}
+
+.product-info_subtitle{
+    font-size: 16px;
+    color: grey;
+    line-height: 130%;
+}
+
+.product-info_category { 
+    padding: 5px 10px;
+    border-radius: 30px; 
+    font-size: 14px;
+    color: s.color(dark);
+    border: 1px solid transparent;
+}
+
+.product-info_category--1 {
+    border-color: #0050FF;
+    color: #0050FF;
+    display: flex;
+    padding: 8px 16px;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.product-info_category--2 {
+    border-color: #008000;
+    color: #008000;
+    display: flex;
+    padding: 8px 16px;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.right_part{
+    width: 50%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: s.space(6);
+    align-items: flex-start;
+    position: relative;
+}
+
+.left_part{
+    width: 50%;
+    background-color: rgb(211, 211, 211);
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+
+.product-info_button{
+    position: absolute;
+    bottom: 0px;
+}

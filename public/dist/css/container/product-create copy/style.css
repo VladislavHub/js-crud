@@ -26,54 +26,44 @@ h1 {
   font-size: 18px;
   font-weight: 700;
 }
+.card_input_elem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 50%;
+}
+.card_input_elem_big {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
 .card_input_small {
   display: flex;
-  justify-content: space-between;
-  gap: 24px;
+  gap: 16px;
   padding-bottom: 16px;
+  width: auto;
+}
+.card_input_big {
+  display: flex;
+  gap: 16px;
   width: auto;
 }
 .card_label {
   font-size: 14px;
 }
+.card_button {
+  margin-top: 16px;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 16px;
+  color: white;
+  background-color: rgb(58, 58, 255);
+  width: 100%;
+}
 .card_info {
-  margin-top: 4px;
   font-size: 12px;
   color: gray;
-}
-.card_buttons {
-  display: flex;
-  justify-content: space-around;
-  gap: 16px;
-  margin-top: 16px;
-}
-
-.button_primary {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: #ddd;
-  background-color: rgb(37, 37, 251);
-  min-height: 32px;
-  height: 100%;
-  width: 100%;
-  font-size: 12px;
-  border-radius: 4px;
-}
-
-.button_danger {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: #ddd;
-  background-color: rgb(174, 4, 4);
-  min-height: 32px;
-  height: 100%;
-  width: 100%;
-  font-size: 12px;
-  border-radius: 4px;
 }
 
 .input_small {
@@ -82,7 +72,6 @@ h1 {
   padding: 4px;
   box-shadow: 1px 1px 41px -8px rgb(255, 255, 255);
   background-color: rgb(213, 212, 212);
-  width: 100%;
 }
 
 .input_big {
@@ -93,13 +82,6 @@ h1 {
   width: 100%;
   box-shadow: 1px 1px 41px -8px rgb(255, 255, 255);
   background-color: rgb(213, 212, 212);
-}
-
-.card_input_item {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
